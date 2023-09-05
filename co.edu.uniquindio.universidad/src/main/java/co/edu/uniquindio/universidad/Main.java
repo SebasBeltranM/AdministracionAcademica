@@ -6,7 +6,7 @@ public class Main {
         Estudiante estudiante2 = crearEstudiante("María", 15, "pepita@mail.com", 1, 2.0, 2.5, 4.5);
         Estudiante estudiante3 = crearEstudiante("pepe", 20, "pepe@mail.com", 4, 4.0, 2.5, 4.5);
         Docente docente1 = crearDocente("Oscar", 40, "Oscar@mail.com");
-
+        Curso curso = crearCurso("Programación 1", 2, "02N", 3, "Nocturno", estudiante1, estudiante2, estudiante3, docente1);
 
 
     }
@@ -29,6 +29,22 @@ public class Main {
         docente.setNombre(nombre);
         docente.setEdad(edad);
         docente.setCorreo(correo);
+        return docente;
 
     }
+
+    public static Curso crearCurso (String nombre, int semestre, String grupo, int creditos, String jornada, Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3, Docente docente1){
+        Curso curso = new Curso();
+        curso.setNombre(nombre);
+        curso.setSemestre(semestre);
+        curso.setGrupo(grupo);
+        curso.setCreditos(creditos);
+        curso.setJornada(jornada);
+        curso.setEstudiante1(estudiante1);
+        curso.setEstudiante2(estudiante2);
+        curso.setEstudiante3(estudiante3);
+        curso.setDocente1(docente1);
+        return curso;
+    }
+
 }

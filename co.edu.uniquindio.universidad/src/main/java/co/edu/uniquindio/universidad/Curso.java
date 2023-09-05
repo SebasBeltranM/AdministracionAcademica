@@ -1,6 +1,7 @@
 package co.edu.uniquindio.universidad;
 
 import co.edu.uniquindio.universidad.Estudiante;
+import co.edu.uniquindio.universidad.Docente;
 
 public class Curso {
     private String nombre;
@@ -12,19 +13,7 @@ public class Curso {
     private Estudiante estudiante1;
     private Estudiante estudiante2;
     private Estudiante estudiante3;
-    private Docente docente;
-
-
-    public Curso() {
-    }
-
-    public Curso(String nombre, int semestre, String grupo, int creditos, String jornada) {
-        this.nombre = nombre;
-        this.semestre = semestre;
-        this.grupo = grupo;
-        this.creditos = creditos;
-        this.jornada = jornada;
-    }
+    private Docente docente1;
 
     public String getNombre() {return nombre;}
 
@@ -86,5 +75,20 @@ public class Curso {
 
     public void setEstudiante3(Estudiante estudiante3) {
         this.estudiante3 = estudiante3;
+    }
+
+    public Docente getDocente(){return docente1;}
+
+    public void setDocente1(Docente docente1){this.docente1 = docente1;}
+
+    public Curso() {
+    }
+
+    public Curso(String nombre, int semestre, String grupo, int creditos, String jornada) {
+        this.nombre = nombre;
+        this.semestre = semestre;
+        this.grupo = grupo;
+        this.creditos = creditos;
+        this.jornada = jornada;
     }
 }
